@@ -1,0 +1,51 @@
+import java.util.*;
+
+public class MicrowaveOverHeatingTime
+{
+    public static void main (String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("How many items to heat: ");
+        int itemHeat = scan.nextInt();
+        
+        System.out.print("Time for one item: ");
+        int timeperItem = scan.nextInt();
+        
+        int totalSeconds;
+        
+        if (timeperItem < 100)
+        {
+            totalSeconds = timeperItem;
+        }
+        else
+        {
+            int timeMinutes = timeperItem / 100;
+            int timeSeconds = timeperItem % 100;
+            totalSeconds = timeMinutes * 60 + timeSeconds;
+        }
+        
+        if (itemHeat != 1)
+        {
+            if (itemHeat == 2)
+            {
+                totalSeconds += totalSeconds / 2;
+            }
+            if (itemHeat == 3)
+            {
+                totalSeconds *= 2;
+            }
+            if (itemHeat > 3)
+            {
+                System.out.print("Heating more than three items at once is not recommended.");
+                System.exit(0);
+            }
+        }
+        
+        int timeMinutes = totalSeconds / 60;
+        int timeSeconds = totalSeconds % 60;
+        
+        System.out.print("Heat for " + timeMinutes + " minutes " + timeSeconds + " seconds ");
+        
+    }
+}
