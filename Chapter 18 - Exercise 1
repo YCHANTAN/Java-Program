@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class CheckCharge
+{
+    public static void main(String[] args)
+    {
+    Scanner scan = new Scanner(System.in);
+    
+    System.out.print("Enter checking account: $");
+    double checkingAccount = scan.nextDouble();
+    
+    System.out.print("Enter saving account: $");
+    double savingAccount = scan.nextDouble();
+    
+    double serviceCharge;
+    
+    if (checkingAccount > 1000 || savingAccount > 1500)
+    {
+        serviceCharge = 0.00;
+    }
+    else
+    {
+        serviceCharge = 0.15;
+    }
+    
+    System.out.println("Service Charge: $" + serviceCharge);
+    }
+}
