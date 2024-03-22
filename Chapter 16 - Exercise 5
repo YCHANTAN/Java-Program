@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class Y2K
+{
+    public static void main (String []args)
+    {
+        Scanner scan = new Scanner (System.in);
+        byte age;
+        
+        System.out.print("Year of Birth: ");
+        byte birthYear = scan.nextByte();
+        
+        System.out.print("Current Year: ");
+        byte currentYear = scan.nextByte();
+        
+        if (birthYear <= currentYear)
+        {
+            if (currentYear - birthYear <= 99)
+                {      
+                age = (byte) (currentYear - birthYear);
+                }
+            else
+                {     
+                age = (byte) ((currentYear - birthYear) - 100);
+                }
+        }
+        else
+        {
+            if (birthYear - currentYear < 99)
+                {
+                age = (byte) (birthYear - currentYear);
+                }
+            else;
+                {
+                age = (byte) (100 - (birthYear - currentYear));
+                }
+        }
+        System.out.println("Your age: " + age);
+    }
+}
