@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class TirePressure
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Input right front pressure: ");
+        float rightFront = scan.nextFloat();
+        
+        System.out.println("Input left front pressure: ");
+        float leftFront = scan.nextFloat();
+        
+        System.out.println("Input right rear pressure: ");
+        float rightRear = scan.nextFloat();
+        
+        System.out.println("Input left rear pressure: ");
+        float leftRear = scan.nextFloat();
+        
+        if (rightFront == leftFront && rightRear == leftRear)
+        {
+            System.out.println("Inflation is OK");
+            System.exit(0);
+        }
+        
+        System.out.println("Inflation is not OK");
+    }
+}
