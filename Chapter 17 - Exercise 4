@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class FantasyGame
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner (System.in);
+        
+        System.out.println("Welcome to Yertle's Quest");
+        
+        System.out.println("Enter the name of your character: ");
+        String characterName = scan.next();
+        
+        System.out.println("Enter strength (1-10): ");
+        byte strength = scan.nextByte();
+        
+        System.out.println("Enter health (1-10): ");
+        byte health = scan.nextByte();
+        
+        System.out.println("Enter luck (1-10): ");
+        byte luck = scan.nextByte();
+        
+        int totalPoint = strength + health + luck;
+        
+        if (totalPoint > 15)
+        {
+            System.out.println("You have give your character too many points!  Default values have been assigned: ");
+            System.out.println(characterName + ", strength: 5, health: 5, luck: 5");
+            System.exit(0);
+        }
+        
+        System.out.print(characterName + ", strength: " + strength + ", health: " + health + ", luck: " + luck);
+        
+    }
+}
