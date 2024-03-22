@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class TownDump
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Enter weight of a load of trash (in pounds): ");
+        float weight = scan.nextFloat();
+        
+        int baseWeight = 200;
+        int baseCharge = 20;
+        int additionalCharge = 8;
+        float additionalWeight = weight - baseWeight;
+        float additionalHundreds = additionalWeight / 100;
+        if (additionalWeight % 100 != 0)
+        {
+            additionalHundreds++;
+        }
+        
+        float totalCharge = baseCharge + additionalHundreds + additionalCharge;
+        
+        System.out.println("The charge for disposing of " + weight + " pounds of trash is $" + totalCharge);
+
+    }
+}
