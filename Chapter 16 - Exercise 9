@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class MidnightMadness {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter age: ");
+        int age = scan.nextInt();
+
+        System.out.print("Enter time (Use 24-hour clock format, Example 5pm = 1700): ");
+        int time = scan.nextInt();
+
+        double ticketPrice = 0
+
+        if (time >= 2200 && age <= 13)
+        {
+            System.out.print("Sorry, children can't purchase tickets after 10pm");
+        }
+        else
+        {
+            if (age > 13)
+            {
+                if (time < 1700)
+                {
+                    ticketPrice = 5.00;
+                } else
+                {
+                    ticketPrice = 8.00;
+                }
+            }
+            else
+            {
+                if (time < 1700)
+                {
+                    ticketPrice = 2.00;
+                } else
+                {
+                    ticketPrice = 4.00;
+                }
+            }
+        }
+
+        if (ticketPrice != 0.00) {
+            System.out.print("Ticket Price: $" + ticketPrice);
+        }
+    }  
+}
