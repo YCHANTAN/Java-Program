@@ -1,0 +1,48 @@
+import java.util.*;
+
+public class TirePressure {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        boolean goodPressure = true;
+        
+        System.out.println("Input right front pressure: ");
+        float rightFront = scan.nextFloat();
+        if(rightFront > 45 || rightFront < 35) {
+            System.out.println("Warning: pressure is out of range");
+            goodPressure = false;
+        }
+        
+        System.out.println("Input left front pressure: ");
+        float leftFront = scan.nextFloat();
+        if (leftFront > 45 || leftFront < 35) {
+            System.out.println("Warning: pressure is out of range");
+            goodPressure = false;
+        }
+        
+        System.out.println("Input right rear pressure: ");
+        float rightRear = scan.nextFloat();
+        if (rightRear > 45 || rightRear < 35) {
+            System.out.println("Warning: pressure is out of range");
+            goodPressure = false;
+        }
+        
+        System.out.println("Input left rear pressure: ");
+        float leftRear = scan.nextFloat();
+        if (leftRear > 45 || leftRear < 35) {
+            System.out.println("Warning: pressure is out of range");
+            goodPressure = false;
+        }
+        
+        if (goodPressure && Math.abs(rightFront - leftFront) <= 3 && Math.abs(rightRear - leftRear) <= 3) 
+        {
+            System.out.println("Inflation is OK");
+        } 
+        else 
+        {
+            System.out.println("Inflation is BAD");
+        }
+
+        
+        scan.close();
+    }
+}
