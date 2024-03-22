@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class InternetDelicatessen
+{ 
+    public static void main(String[] args) 
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Enter the item: ");
+        String item = scan.nextLine();
+        
+        System.out.print("Enter the price (in cents): ");
+        int price = scan.nextInt();
+        
+        System.out.print("Overnight delivery (0==no, 1==yes): ");
+        int overnightDelivery = scan.nextInt();
+
+        int deliveryCharge = 0;
+        
+       
+        if (overnightDelivery == 1) 
+        {
+            deliveryCharge = 500; 
+        }
+        
+        int total = price + deliveryCharge;
+        
+        double priceInDollars = price / 100.0;
+        double deliveryChargeInDollars = deliveryCharge / 100.0;
+        double totalInDollars = total / 100.0;
+
+        // Display the invoice
+        System.out.println("Invoice:");
+        System.out.println("  " + item + "    $" + String.format("%.2f", priceInDollars));
+        System.out.println("  Delivery   $" + String.format("%.2f", deliveryChargeInDollars));
+        System.out.println("  Total      $" + String.format("%.2f", totalInDollars));
+        
+    }
+}
