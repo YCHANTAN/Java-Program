@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class YourAgeinSeconds
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Age in Years: ");
+        int ageYears = scan.nextInt();
+        
+        System.out.print("Age in Months: ");
+        int ageMonths = scan.nextInt();
+        
+        System.out.print("Age in Days: ");
+        int ageDays = scan.nextInt();
+        
+        int totalDays = 365;
+        
+        if (ageMonths >= 1) totalDays += 31;
+        if (ageMonths >= 2) totalDays += 28;
+        if (ageMonths >= 3) totalDays += 31;
+        if (ageMonths >= 4) totalDays += 30;
+        if (ageMonths >= 5) totalDays += 31;
+        if (ageMonths >= 6) totalDays += 30;
+        if (ageMonths >= 7) totalDays += 31;
+        if (ageMonths >= 8) totalDays += 31;
+        if (ageMonths >= 9) totalDays += 30;
+        if (ageMonths >= 10) totalDays += 31;
+        if (ageMonths >= 11) totalDays += 30;
+        if (ageMonths >= 12) totalDays += 31;
+        
+        totalDays += ageDays;
+        
+        float ageInSeconds = totalDays * 24 * 60 * 60;
+        
+        System.out.println("Your age in seconds: " + ageInSeconds);
+        
+        double percentageLived = ((double) ageInSeconds / 2.5e9) * 100;
+        
+        System.out.print("Expected Life Span Percentage: " + percentageLived + "%");
+    }
+}
