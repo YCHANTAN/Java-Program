@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class SteamEngineEfficiency
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        final double normalAirTemperature = 300.0;
+        final double boilingTemperature = 373.0;
+        
+        System.out.print("Enter air temperature (In Kelvin): ");
+        double tAir = scan.nextDouble();
+        
+        System.out.print("Enter steam temperature (In Kelvin): ");
+        double tSteam = scan.nextDouble();
+        
+        if (tSteam < boilingTemperature)
+        {
+            System.out.print("There is no steam, so the efficiency is zero");
+            System.exit(0);
+        }
+        
+        double efficiency = 1.0 - tAir / tSteam;
+        
+        System.out.println("The maximum efficiency of the steam engine is: " + efficiency);
+    }
+}
