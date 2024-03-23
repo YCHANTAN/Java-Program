@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class CharacterCounterWithFileInput {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        int totalConsonants = 0, totalVowels = 0, totalPunctuation = 0, totalSpaces = 0, totalCharacters = 0;
+        
+        System.out.println("Input lines of text (type 'end' to finish input):");
+        String line;
+        while (!(line = scan.nextLine()).equals("end")) {
+            for (int i = 0; i < line.length(); i++) {
+                char ch = Character.toLowerCase(line.charAt(i));
+                if (ch >= 'a' && ch <= 'z') {
+                    if ("aeiou".indexOf(ch) != -1) {
+                        totalVowels++;
+                    } else {
+                        totalConsonants++;
+                    }
+                } else if (ch == ' ') {
+                    totalSpaces++;
+                } else if (",.?!;:".indexOf(ch) != -1) {
+                    totalPunctuation++;
+                }
+                totalCharacters++;
+            }
+        }
+        
+        int totalNonSpaceCharacters = totalCharacters - totalSpaces - totalPunctuation;
+
+        System.out.println("\nTotal Characters: " + totalCharacters);
+        System.out.println("Consonants: " + totalConsonants + " (" + (totalConsonants * 100.0 / totalNonSpaceCharacters) + "%)");
+        System.out.println("Vowels: " + totalVowels + " (" + (totalVowels * 100.0 / totalNonSpaceCharacters) + "%)");
+        System.out.println("Punctuation Characters: " + totalPunctuation + " (" + (totalPunctuation * 100.0 / totalNonSpaceCharacters) + "%)");
+        System.out.println("Spaces: " + totalSpaces + " (" + (totalSpaces * 100.0 / totalCharacters) + "%)");
+
+    }
+}
