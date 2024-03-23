@@ -1,0 +1,51 @@
+import java.util.*;
+
+public class CharacterCount
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Input line text: ");
+        String line = scan.nextLine();
+        
+        int consonants = 0, vowels = 0, punctuationCharacter = 0, spaces = 0;
+        
+        for (int i = 0; i < line.length(); i++)
+        {
+            char ch = line.charAt(i);
+            switch (Character.toLowerCase(ch))
+            {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    vowels++;
+                    break;
+                
+                case ' ':
+                    spaces++;
+                    break;
+                    
+                case '.':
+                case ',':
+                case ':':
+                case ';':
+                case '!':
+                case '?':
+                    punctuationCharacter++;
+                    break;
+                
+                default:
+                    if (ch >= 'a' && ch <= 'z')
+                    consonants++;
+            }
+        }
+        
+        System.out.println("Vowels: " + vowels);
+        System.out.println("Consonants: " + consonants);
+        System.out.println("Spaces: " + spaces);
+        System.out.println("Punctuation: " + punctuationCharacter);
+    }
+}
