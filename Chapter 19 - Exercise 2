@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class SumofSequentialIntegers {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter N:");
+        int n = scan.nextInt();
+
+        int loopSum = 0;
+        int formulaSum;
+        int i = 1; 
+        
+        while (i <= n) 
+        { 
+            loopSum += i;
+            i++; 
+        }
+
+        formulaSum = (n * (n + 1)) / 2;
+
+        System.out.println("Loop Sum = " + loopSum);
+        System.out.println("Formula Sum =  " + formulaSum);
+    }
+}
