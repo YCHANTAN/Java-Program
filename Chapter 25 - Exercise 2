@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class BirthdayParadox
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Enter the number of guests:");
+        int guests = scan.nextInt();
+        
+        double probability = 1.00;
+        
+        for (int i = 1; i < guests; i++)
+        {
+            probability *= (365 - i ) / 365;
+        }
+        
+        System.out.println("Probability that they do not share a birthday:" + probability);
+        
+        int guestsNeeded = 0;
+        double calculativeProbability = 1;
+        while (calculativeProbability > 0.5)
+        {
+            guestsNeeded++;
+            calculativeProbability *= (365 - guestsNeeded) / 365;
+        }
+        
+        System.out.println("Number of guests needed for more than a 50% chance: " + guestsNeeded);
+    }
+}
