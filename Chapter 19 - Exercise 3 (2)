@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class WordsSeparatedbyDots
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Enter first word:");
+        String firstWord = scan.next();
+        
+        System.out.println("Enter second word:");
+        String secondWord = scan.next();
+        
+        int dotCount = 30 - (firstWord.length() + secondWord.length());
+        
+        System.out.print(firstWord);
+
+        int count = 0;
+        while (count < dotCount) 
+        {
+            System.out.print(".");
+            count++;
+        }
+
+        System.out.println(secondWord);
+    }
+}
