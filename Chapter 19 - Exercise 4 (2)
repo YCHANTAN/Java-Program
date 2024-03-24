@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class OneLetterperLine
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Enter a word: ");
+        String word = scan.next();
+        
+        int index = 0;
+        
+        while (index < word.length())
+        {
+            System.out.println(word.charAt(index));
+            
+            index++;
+        }
+    }
+}
