@@ -1,0 +1,127 @@
+import java.util.*;
+
+public class RandomNames
+{
+    public static void main(String[] args)
+    {
+        Random nameRandom = new Random();
+        
+        int firstnameIndex = nameRandom.nextInt(16);
+        int lastnameIndex = nameRandom.nextInt(16);
+        
+        String firstName, lastName;
+        
+        switch (firstnameIndex)
+        {
+            case 0:
+                firstName = "Kobe";
+                break;
+            case 1:
+                firstName = "Mardi";
+                break;
+            case 2:
+                firstName = "Riki";
+                break;
+            case 3:
+                firstName = "Roginand";
+                break;
+            case 4:
+                firstName = "Christian";
+                break;
+            case 5:
+                firstName = "Junex";
+                break;
+            case 6:
+                firstName = "Kenneth";
+                break;
+            case 7:
+                firstName = "Nicky Shane";
+                break;
+            case 8:
+                firstName = "Francesca Audrey";
+                break;
+            case 9:
+                firstName = "Kiara Mae";
+                break;
+            case 10:
+                firstName = "Mary Grace";
+                break;
+            case 11: 
+                firstName = "Clint Justine";
+                break;
+            case 12:
+                firstName = "Erica Gin";
+                break;
+            case 13:
+                firstName = "Theofil";
+                break;
+            case 14:
+                firstName = "Geraldyn";
+                break;
+            case 15:
+                firstName = "Kent";
+                break;
+            default:
+                firstName = "Unknown";
+        }
+        
+        switch (lastnameIndex)
+        {
+            case 0:
+                lastName = "Tomamongie";
+                break;
+            case 1:
+                lastName = "Lucero";
+                break;
+            case 2:
+                lastName = "Wapo";
+                break;
+            case 3:
+                lastName = "Villegas";
+                break;
+            case 4:
+                lastName = "Hingpit";
+                break;
+            case 5:
+                lastName = "Baran";
+                break;
+            case 6:
+                lastName = "Viovecente";
+                break;
+            case 7:
+                lastName = "Estrada";
+                break;
+            case 8:
+                lastName = "Alaba";
+                break;
+            case 9:
+                lastName = "Abella";
+                break;
+            case 10:
+                lastName = "Umpad";
+                break;
+            case 11:
+                lastName = "Nepomuceno";
+                break;
+            case 12:
+                lastName = "Echavez";
+                break;
+            case 13:
+                lastName = "Pondar";
+                break;
+            case 14:
+                lastName = "Cataluna";
+                break;
+            case 15:
+                lastName = "Garcia";
+                break;
+            default:
+                lastName = "Unknwn";
+        }
+        
+        System.out.println("Generated Name");
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println (firstName + " " + lastName);
+    }
+} 
