@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class TriangleandSquareNumbers 
+{
+    public static void main(String[] args) 
+    {
+        int upperLimit = 1000; 
+
+        System.out.println("Square and Triangle Numbers up to " + upperLimit + ":");
+        for (int n = 1; n <= upperLimit; n++) 
+        {
+            boolean square = false;
+            boolean triangle = false;
+            int sqrt = 1;
+            
+            while (sqrt * sqrt <= n) 
+            {
+                if (sqrt * sqrt == n) 
+                {
+                    square = true;
+                    break;
+                }
+                sqrt++;
+            }
+            
+            int sum = 0;
+            
+            for (int i = 1; sum <= n; i++) 
+            {
+                sum += i;
+                if (sum == n) 
+                {
+                    triangle = true;
+                    break;
+                }
+            }
+
+            if (square && triangle) 
+            {
+                System.out.println(n);
+            }
+        }
+    }
+}
