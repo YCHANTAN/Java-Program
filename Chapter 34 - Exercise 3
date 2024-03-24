@@ -1,0 +1,95 @@
+import java.util.Scanner;
+
+public class InternetAcronyms {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        while (true) {
+            int totalConsonants = 0, totalVowels = 0, totalPunctuation = 0, totalSpaces = 0, totalCharacters = 0;
+
+            System.out.println("Input line of text (type 'end' to finish input): ");
+            String inputLine = scan.nextLine();
+
+            if (inputLine.equals("end")) {
+                break;
+            }
+
+            Scanner lineScanner = new Scanner(inputLine);
+            StringBuilder outputLine = new StringBuilder();
+
+            while (lineScanner.hasNext()) {
+                String word = lineScanner.next();
+                totalCharacters += word.length();
+
+                // Check if the word is an acronym
+                String acronym = null;
+                switch (word.toLowerCase()) {
+                    case "idk":
+                        acronym = "I don't know";
+                        break;
+                    case "istg":
+                        acronym = "I swear to god";
+                        break;
+                    case "ikyk":
+                        acronym = "I know you know";
+                        break;
+                    case "wdym":
+                        acronym = "what do you mean";
+                        break;
+                    case "yolo":
+                        acronym = "you only live once";
+                        break;
+                    case "ynk":
+                        acronym = "you never know";
+                        break;
+                    case "ftw":
+                        acronym = "for the win";
+                        break;
+                    case "lol":
+                        acronym = "laugh out loud";
+                        break;
+                    case "btw":
+                        acronym = "by the way";
+                        break;
+                    case "brb":
+                        acronym = "be right back";
+                        break;
+                    case "omg":
+                        acronym = "oh my god";
+                        break;
+                    case "fr":
+                        acronym = "for real";
+                        break;
+                    case "ngl":
+                        acronym = "not gonna lie";
+                        break;
+                }
+
+                if (acronym != null) {
+                    outputLine.append(acronym).append(" ");
+                    continue;
+                }
+
+                for (int i = 0; i < word.length(); i++) {
+                    char ch = Character.toLowerCase(word.charAt(i));
+                    if (ch >= 'a' && ch <= 'z') {
+                        if ("aeiou".indexOf(ch) != -1) {
+                            totalVowels++;
+                        } else {
+                            totalConsonants++;
+                        }
+                    } else if (ch == ' ') {
+                        totalSpaces++;
+                    } else if (",.?!;:".indexOf(ch) != -1) {
+                        totalPunctuation++;
+                    }
+                }
+
+                outputLine.append(word).append(" ");
+            }
+
+            System.out.println("Output:");
+            System.out.println(outputLine.toString().trim());
+        }
+    }
+}
