@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class LogTable
+{
+    public static void main(String[] args)
+    {
+        System.out.println("<html>");
+        System.out.println("<body>");
+        System.out.println("<table>");
+        System.out.println("<tr><th>x</th><th>ln(x)</th></tr>");
+        
+        for (int i = 1; i <= 10; i++) 
+        {
+            double x = i;
+            double logx = Math.log(x);
+            System.out.println("<tr><td>" + x + "</td><td>" + logx + "</td></tr>");
+        }
+
+        System.out.println("</table>");
+        System.out.println("</body>");
+        System.out.println("</html>");
+    }
+}
