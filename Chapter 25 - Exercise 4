@@ -1,0 +1,24 @@
+public class MonkeyinaTree 
+{
+    public static void main(String[] args) 
+    {
+        String[] numbers = {"Five", "Four", "Three", "Two", "One"};
+        String[] verses = 
+        {
+            "little monkeys swinging in a tree",
+            "Teasing Mr Crocodile \"you can't catch me\"",
+            "Along came the crocodile as quiet as can be",
+            "and SNAP!\n"
+        };
+
+        for (int i = 0; i < numbers.length; i++) 
+        {
+            System.out.println(numbers[i] + " " + verses[0]);
+            System.out.println(verses[1]);
+            System.out.println(verses[2]);
+            System.out.println(verses[3]);
+        }
+        
+        System.out.println("No little monkeys swinging in a tree");
+    }
+}
