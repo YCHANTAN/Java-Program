@@ -1,0 +1,21 @@
+/* This program prints the reassigned value of the variable.
+   Name: Christian A. Osorno
+   Date: February 18,2024
+*/
+public class AverageRainFall //Class Name
+{  
+   public static void main( String[] args )
+   {
+      //Declaration
+      byte April = 12, May = 14, June = 8;
+      double rainfall = ( April + May + June ) / 3.0;
+      
+      //Output
+      System.out.println("Rainfall for April: " + April); 
+      System.out.println("Rainfall for May: " + May); 
+      System.out.println("Rainfall for June: " + June); 
+      
+      //Output for average Rainfalls
+      System.out.println("Average Rainfalls: " + rainfall);
+   }
+}     
