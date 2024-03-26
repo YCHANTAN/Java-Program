@@ -1,0 +1,15 @@
+/*
+This program is Exercise1 that prints the short data type value.
+Name: Christian A. Osorno
+Date: February 6, 2024
+*/
+public class Shortfall //Class Name
+{
+   public static void main ( String[] args ) 
+   {
+      //Declaration  
+      short value = 32;
+      //Output
+      System.out.println("A short: " + value);
+   }
+}
