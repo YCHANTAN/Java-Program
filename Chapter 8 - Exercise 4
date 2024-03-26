@@ -1,0 +1,15 @@
+/*
+This program is Exercise4 that prints the character data type value.
+Name: Christian A. Osorno
+Date: February 6, 2024
+*/
+public class CharacterAssassination //Class Name
+{
+   public static void main ( String[] args )
+   {
+      //Declaration
+      char ch = 'A'; 
+      //Output
+      System.out.println("A char: " + ch);
+   }
+}
