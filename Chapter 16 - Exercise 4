@@ -1,0 +1,31 @@
+/* This program decides if the contestant is allowed in the heavyweight division or not.
+   Date: February 18, 2024
+*/
+import java.util.Scanner;
+
+public class PieEatingContest //Class Name
+{
+    public static void main(String[] args) 
+    {
+        Scanner scan = new Scanner(System.in); //Declaration of Scanner
+
+        //Input
+        System.out.print("Enter contestant's weight: ");
+        
+        //Declaration
+        int contestantWeight = scan.nextInt();
+
+        //Process
+        if (contestantWeight >= 220 && contestantWeight <= 280) 
+        {
+            //Output if the contestant is allowed
+            System.out.println("The contestant is allowed in the heavyweight division.");
+        }
+         
+        else 
+        {
+            //Output if the contestant is not allowed
+            System.out.println("The contestant is not allowed in the heavyweight division.");
+        }
+    }
+}
