@@ -1,0 +1,39 @@
+/* This program calculate the discount price on purchase amount and determine if it has discounts or not. Also prints the calculated discounted price.
+   Name: Christian A. Osorno
+   Date: February 18, 2024
+*/
+import java.util.Scanner;
+
+public class DiscountPrices
+{
+    public static void main(String[] args) //Class Name
+    {
+        Scanner scan = new Scanner(System.in); //Declaration of Scanner
+
+        //Input
+        System.out.print("Enter amount of purchases in cents: ");
+        
+        //Declaration
+        int purchaseAmountCents = scan.nextInt();
+
+        //Discount is applied for purchases over $10.00 (1000 cents)
+        int discountThreshold = 1000;
+        int discountPercentage = 10;
+
+        //Check if the purchase amount is over $10.00
+        if (purchaseAmountCents > discountThreshold) 
+        {
+            //Calculate the discounted price
+            int discount = (purchaseAmountCents * discountPercentage) / 100;
+            int discountedPrice = purchaseAmountCents - discount;
+            
+            //Output of discounted price
+            System.out.println("Discounted price: " + discountedPrice);
+        } 
+        else 
+        {
+            //Output if there is no discount applied
+            System.out.println("No discount applied. Purchase amount: " + purchaseAmountCents);
+        }
+    }
+}
