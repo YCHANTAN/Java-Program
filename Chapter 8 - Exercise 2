@@ -1,0 +1,15 @@
+/*
+This program is Exercise2 that prints the double data type value.
+Name: Christian A. Osorno
+Date: February 6, 2024
+*/
+public class Double Jeopardy //Class Name
+{
+   public static void main ( String[] args )
+   {
+      //Declaration
+      double value = 32;
+      //Output
+      System.out.println("A double: " + value);
+   }
+}
