@@ -1,0 +1,16 @@
+/* This program prints and calculate the value of a quadratic.
+   Name: Christian A. Osorno
+   Date: February 8, 2024
+*/
+public class ValueOfaQuadratic //Class name
+{  
+  public static void main ( String[] args )  
+  {
+    //Declaration
+    double x = 4.0; 
+    double value = (3 * (x * x)) - (8 * x) + 4;
+    
+    //Output
+    System.out.println("At X = "+ x +" the value is "+ value);
+  }
+}      
