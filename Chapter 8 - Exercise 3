@@ -1,0 +1,15 @@
+/*
+This program is Exercise3 that prints the double data type value and computes the value of exp(32).
+Name: Christian A. Osorno
+Date: February 6, 2024
+*/
+public class Exponential Explosion //Class Name
+{
+   public static void main ( String[] args )
+   {
+      //Declaration
+      double value = 32;
+      //Output
+      System.out.println("e to the power value: " + Math.exp( value ));
+   }
+}
