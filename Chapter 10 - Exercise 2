@@ -13,6 +13,6 @@ public class Trigonometry //Class Name
       double sum =(sinx * sinx) + (cosx * cosx);
       
       //Output
-      System.out.println("sine: " + sinx + "cosine: " + cosx + "sum of square: " + sum);
+      System.out.println("sine: " + sinx + " cosine: " + cosx + " sum of square: " + sum);
    }
 }
