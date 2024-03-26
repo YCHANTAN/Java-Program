@@ -3,7 +3,7 @@ This program is Exercise3 that prints the double data type value and computes th
 Name: Christian A. Osorno
 Date: February 6, 2024
 */
-public class Exponential Explosion //Class Name
+public class ExponentialExplosion //Class Name
 {
    public static void main ( String[] args )
    {
