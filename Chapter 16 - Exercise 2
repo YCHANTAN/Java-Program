@@ -1,0 +1,48 @@
+/* This program calculate the prices and it also decide if it follows a correct order must have at least as many nuts as bolts and at least twice as many washers as blots, otherwise the order has an error. .
+   Name: Christian A. Osorno
+   Date: February 18, 2024
+*/
+import java.util.*;
+
+public class OrderChecker //Class Name
+{
+   public static void main(String[] args)
+   {
+      Scanner scan = new Scanner(System.in); //Declaration of Scanner
+      
+      //Declaration of constant value of the prices
+      final int boltPrice = 5;
+      final int nutPrice = 3;
+      final int washerPrice = 1;
+      
+      //Input
+      System.out.print("Number of bolts: ");
+      int boltNum = scan.nextInt();
+      
+      System.out.print("Number of nuts: ");
+      int nutNum = scan.nextInt();
+      
+      System.out.print("Number of washers: ");
+      int washerNum = scan.nextInt();
+      
+      //Check if the order has any errors
+      if (boltNum > nutNum)
+      {
+         System.out.print("Check the Order: too few nuts");
+      }
+      else if (washerNum < 2 * boltNum)
+      {
+         System.out.print("Check the Order: too few washers");
+      }
+      else
+      {
+      System.out.println("\nOrder is OK");
+      }
+      
+      //Calculates the total cost
+      int totalCost = boltNum * boltPrice + nutNum * washerPrice + washerNum * washerPrice;
+      
+      //Output
+      System.out.println("\n\nTotal cost: " + totalCost + " cents");
+   }
+}
