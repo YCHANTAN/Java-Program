@@ -1,0 +1,18 @@
+/* This program prints and calculate trigonometry.
+   Name: Christian A. Osorno
+   Date: February 8, 2024
+*/
+public class Trigonometry //Class Name
+{
+   public static void main (String[] args)
+   {
+      //Declaration
+      double value = 0.5236;
+      double sinx = Math.sin(value);
+      double cosx = Math.cos(value);
+      double sum =(sinx * sinx) + (cosx * cosx);
+      
+      //Output
+      System.out.println("sine: " + sinx + "cosine: " + cosx + "sum of square: " + sum);
+   }
+}
