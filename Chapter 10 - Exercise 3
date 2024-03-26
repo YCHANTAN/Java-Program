@@ -1,0 +1,18 @@
+/* This program prints and calculate from degrees to radians.
+   Name: Christian A. Osorno
+   Date: February 8, 2024
+*/
+public class DegreestoRadians //Class Name
+{
+   public static void main(String[] args)
+   {
+      //Declaration
+      double degrees = 180;
+      
+      //Use of Math.PI to computer
+      double rad = degrees * Math.PI / 180;
+      
+      //Output
+      System.out.println("From Degrees: " + degrees + "\nTo Radians: " + rad);
+   }
+}
