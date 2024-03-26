@@ -1,0 +1,18 @@
+/* This program prints and calculate a payroll.
+   Name: Christian A. Osorno
+   Date: February 8, 2024
+*/
+public class PayrollProgram //Class Name
+{  
+  public static void main ( String[] args )  
+  {
+    //Declaration
+    long   hoursWorked = 40;    
+    double payRate     = 10.0, taxRate = 0.10;  
+    
+    //Output  
+    System.out.println("Hours Worked: " + hoursWorked );
+    System.out.println("pay Amount  : " + (hoursWorked * payRate) );
+    System.out.println("tax Amount  : " + (hoursWorked * payRate * taxRate) );
+  }
+}
