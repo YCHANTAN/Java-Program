@@ -1,16 +1,17 @@
-/* This program calculate the discount price on purchase amount and determine if it has discounts or not. Also prints the calculated discounted price.
+/* This program calculate the remaining miles and also check if it is safe to proceed or you need to get gas.
    Name: Christian A. Osorno
    Date: February 18, 2024
 */
+
 import java.util.Scanner;
 
-public class LastChanceGas //Class Name
+public class LastChanceGas 
 {
     public static void main(String[] args) 
     {
-        Scanner scan = new Scanner(System.in); //Declaration of Scanner
-        
-        //Input
+        Scanner scan = new Scanner(System.in); // Declaration of Scanner
+
+        // Input
         System.out.println("Tank capacity: ");
         int tankCapacity = scan.nextInt();
 
@@ -20,13 +21,20 @@ public class LastChanceGas //Class Name
         System.out.println("Miles per gallon: ");
         int milesPerGallon = scan.nextInt();
 
-        //Declaration and Process for Remaining Miles
+        // Declaration and Process for Remaining Miles
         int remainingMiles = (gaugeReading * tankCapacity * milesPerGallon) / 100;
-        
-        //Declaring and Processing the decision
-        String decision = (remainingMiles >= 200) ? "Safe to Proceed" : "Get Gas!";
 
-        //Output
+        // Declaring and Processing the decision
+        String decision;
+        if (remainingMiles >= 200) 
+        {
+            decision = "Safe to Proceed";
+        } else 
+        {
+            decision = "Get Gas!";
+        }
+
+        // Output
         System.out.println(decision);
     }
 }
