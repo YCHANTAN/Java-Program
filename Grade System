@@ -1,0 +1,84 @@
+import java.util.*;
+
+public class GradeSystem 
+{
+    public static void main(String[] args) 
+    {
+        Scanner scan = new Scanner(System.in);
+        int pressedNumber; 
+        
+        do 
+        {
+            System.out.println("[1] Compute Midterm Grade");
+            System.out.println("[2] Compute Final Grade");
+            System.out.println("[3] Quit App");
+            
+            System.out.print("Press 1, 2, or 3: ");
+            pressedNumber = scan.nextInt();
+
+            if (pressedNumber == 1) 
+            {
+                System.out.print("Enter your Quiz Grade: ");
+                float quizGrade = scan.nextFloat();
+
+                System.out.print("Enter your Labworks Grade: ");
+                float labworksGrade = scan.nextFloat();
+
+                System.out.print("Enter your Midterm Exam Grade: ");
+                float midtermexamGrade = scan.nextFloat();
+
+                float grade = (quizGrade + labworksGrade + midtermexamGrade) / 3;
+
+                System.out.println("Final Grade: " + grade);
+                
+                if (grade <= 3.0) 
+                {
+                    System.out.println("Remarks: PASSED");
+                } 
+                
+                else 
+                {
+                    System.out.println("Remarks: FAILED");
+                }
+            } 
+            
+            else if (pressedNumber == 2) 
+            {
+                System.out.print("Enter your Quiz Grade: ");
+                float quizGrade = scan.nextFloat();
+
+                System.out.print("Enter your Labworks Grade: ");
+                float labworksGrade = scan.nextFloat();
+
+                System.out.print("Enter your Final Exam Grade: ");
+                float finalexamGrade = scan.nextFloat();
+
+                float grade = (quizGrade + labworksGrade + finalexamGrade) / 3;
+
+                System.out.println("Midterm Grade: " + grade);
+                
+                if (grade <= 3.0) 
+                {
+                    System.out.println("Remarks: PASSED");
+                } 
+                
+                else 
+                {
+                    System.out.println("Remarks: FAILED");
+                }
+
+            } 
+            
+            else if (pressedNumber == 3) 
+            {
+                System.out.println("Exiting the application.");
+            } 
+            
+            else 
+            {
+                System.out.println("Invalid input. Please select a valid option.");
+            }
+        } 
+        while (pressedNumber != 3);
+    }
+}
