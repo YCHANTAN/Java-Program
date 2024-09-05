@@ -1,0 +1,45 @@
+/* Name: Christian A. Osorno
+   Course: OOPROG21
+   Date: Septermber 5, 2024
+*/
+
+import java.util.*;
+
+public class Book{
+   private final String title;
+   private final String author;
+   private final String isbn;
+   private int availableCopies;
+    
+   public Book (String title, String author, String isbn, int availableCopies){
+      this.title = title;
+      this.author = author;
+      this.isbn = isbn;
+      this.availableCopies = availableCopies;
+   }
+    
+   public void setCopies (int copies){
+      if (copies > 0)
+         this.availableCopies = availableCopies;      
+   }
+    
+   public String getTitle(){
+      return title;
+   }
+    
+   public String getAuthor(){
+      return author;
+   }
+    
+   public String getIsbn(){
+      return isbn;
+   }
+    
+   public int getavailableCopies(){
+      return availableCopies;
+   }
+    
+   public String toString(){
+      return "|| BOOK" + " || Title = '" + title + '\'' +" || Author = '" + author + '\'' + " || ISBN = '" + isbn + '\'' + " || Available Copies = " + availableCopies + " ||";
+   }
+}
