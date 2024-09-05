@@ -1,0 +1,116 @@
+/* Name: Christian A. Osorno
+   Course: OOPROG21
+   Date: Septermber 5, 2024
+*/
+
+import java.util.*;
+
+public class Library{
+   private static List<Book> books = new ArrayList<>();
+   private static Scanner scanner = new Scanner(System.in);
+
+   public static void main(String... args){
+      books.add(new Book("El Filibusterismo", "Jose Rizal", "A1", 5));
+      books.add(new Book("Contemporary World", "Veinice Jorge", "A2", 100));
+      books.add(new Book("Java Script", "Joyce Farrell", "A3", 1));
+
+      while (true){
+         System.out.println("* LIBRARY MANAGEMENT SYSTEM *");
+         System.out.println("Press (1) to ADD a book.");
+         System.out.println("Press (2) to BORROW a book.");
+         System.out.println("Press (3) to RETURN a book.");
+         System.out.println("Press (4) to CHECK BOOKS and their AVAILABLE COPIES.");
+         System.out.println("Press (5) to EXIT.");
+
+         int choice = scanner.nextInt();
+         scanner.nextLine();
+
+         switch (choice){
+            case 1:
+               addBook();
+               break;
+            case 2:
+               borrowBook();
+               break;
+            case 3:
+               returnBook();
+               break;
+            case 4:
+               checkBooks();
+               break;
+            case 5:
+               System.out.println("Thank you for using the program. Now Exiting :(");
+               return;
+            default:
+               System.out.println("Invalid choice. Please try again.");
+         }
+      }
+   }
+
+   private static void addBook(){
+      System.out.println("Enter the book Title:");
+      String title = scanner.nextLine();
+        
+      System.out.println("Enter the book Author:");
+      String author = scanner.nextLine();
+        
+      System.out.println("Enter the book ISBN:");
+      String isbn = scanner.nextLine();
+        
+      System.out.println("Enter number of Available Copies:");
+      int copies = scanner.nextInt();
+      scanner.nextLine();
+
+      books.add(new Book(title, author, isbn, copies));
+      System.out.println("Book added successfully. Thank You :)");
+   }
+
+   private static void borrowBook(){
+      System.out.println("Enter the ISBN of the book to borrow:");
+      String isbn = scanner.nextLine();
+        
+      for (Book book : books) {
+         if (book.getIsbn().equals(isbn)) {
+            if (book.getavailableCopies() > 0) {
+               int oldCopies = book.getavailableCopies();
+                  book.setCopies(oldCopies - 1);
+                    
+                  System.out.println("Book borrowed successfully. Copies left: " + book.getavailableCopies());
+                  return;
+            } 
+                
+            else{
+               System.out.println("Sorry, no copies available.");
+               return; 
+            }
+         }
+      }
+        
+      System.out.println("Book not found.");
+   }
+
+   private static void returnBook(){
+      System.out.println("Enter the ISBN of the book to return:");
+      String isbn = scanner.nextLine();
+        
+      for (Book book : books){
+         if (book.getIsbn().equals(isbn)){
+            int oldCopies = book.getavailableCopies();
+            book.setCopies(oldCopies + 1);
+                
+            System.out.println("Book returned successfully. Copies available now: " + book.getavailableCopies());
+            return;
+         }
+      }
+        
+      System.out.println("Book not found.");
+   }
+
+   private static void checkBooks(){
+      System.out.println("Available books in the library:");
+        
+      for (Book book : books) {
+         System.out.println(book);
+      }
+   }
+}
